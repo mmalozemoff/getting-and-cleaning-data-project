@@ -1,6 +1,6 @@
 # Codebook
 This is the codebook for the `tidy.txt` output for the Getting and Cleaning Data Project in Coursera.
-The original data is provided [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and described [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+The original data is provided [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and described [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 # Variables
 These are the variables (columns) that exist in the output.
