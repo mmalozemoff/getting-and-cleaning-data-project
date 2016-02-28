@@ -24,11 +24,13 @@ print("Step 1: read in data and combine by rows")
 #read all data
 trainData <- read.table(paste("./",unzippedDir,"/train/X_train.txt",sep=""))
 trainLabel <- read.table(paste("./",unzippedDir,"/train/Y_train.txt",sep=""))
-trainSubject <- read.table(paste("./",unzippedDir,"/train/subject_train.txt",sep=""))
+trainSubject <- read.table(paste("./",unzippedDir,"/train/subject_train.txt",
+                                 sep=""))
 
 testData <- read.table(paste("./",unzippedDir,"/test/X_test.txt",sep=""))
 testLabel <- read.table(paste("./",unzippedDir,"/test/Y_test.txt",sep=""))
-testSubject <- read.table(paste("./",unzippedDir,"/test/subject_test.txt",sep=""))
+testSubject <- read.table(paste("./",unzippedDir,"/test/subject_test.txt",
+                                sep=""))
 
 # combine data by rows
 mergedData <- rbind(trainData, testData)
@@ -79,7 +81,8 @@ activities[,2] <- gsub("_", "", activities[,2])
 activities[,2] <- tolower(activities[,2])
 
 # set activity and subject to factors in combined data frame
-combinedData$activity <- factor(combinedData$activity, levels = activities[,1], labels = activities[,2])
+combinedData$activity <- factor(combinedData$activity, levels = activities[,1], 
+                                labels = activities[,2])
 combinedData$subject <- as.factor(combinedData$subject)
 
 # Step 4: Appropriately label the data set with descriptive variable names.
@@ -93,8 +96,7 @@ print(head(names(combinedData)))
 # Step 5: From the data set in step 4, creates a second, independent tidy data 
 # set with the average of each variable for each activity and each subject.
 
-print("Step 5: create data set with average of each variable for each activity
-      and subject")
+print("Step 5: create data set with average of each variable for each activity and subject")
 
 # load reshape2 library
 library(reshape2)
